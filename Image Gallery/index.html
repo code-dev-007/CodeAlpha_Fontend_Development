@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Image Gallery</h1>
+
+    <div class="gallery" onclick="openLightbox(event)">
+        <img src="https://images.pexels.com/photos/15031440/pexels-photo-15031440/free-photo-of-a-crowd-standing-in-front-of-the-kedarnath-temple-in-kedarnath-india-during-a-ceremony.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Image 1">
+        <img src="https://wallpapercg.com/media/ts_orig/20599.webp"
+            alt="Image 2">
+        <img src="https://wallpapercg.com/media/ts_orig/20596.webp"
+            alt="Image 3">
+        <img src="https://i.pinimg.com/originals/2e/24/1c/2e241c774109d3d920156bc5c4cc0c91.jpg" alt="Image 4"> 
+        <img src="https://wallpapercg.com/media/ts_orig/2061.webp"
+            alt="Image 5"> 
+        <img src="https://t3.ftcdn.net/jpg/06/80/35/80/360_F_680358031_rZ3bhwlPeEe081utZAkERT1Q7iUgqiml.jpg" alt="Image 6">    
+        <img src="https://img.freepik.com/free-photo/sunset-silhouettes-trees-mountains-generative-ai_169016-29371.jpg" alt="Image 7">
+        <img src="https://images6.alphacoders.com/133/1332721.png" alt="Image 8">
+        <img src="https://e0.pxfuel.com/wallpapers/213/93/desktop-wallpaper-widescreen-about-beautiful-sunrise-on-sun-rising-nature-of.jpg" alt="Image 9">
+    </div>
+
+    <!-- Lightbox container -->
+    <div id="lightbox">
+        <!-- Close button -->
+        <span id="close-btn" onclick="closeLightbox()">&times;</span>
+
+        <!-- Main lightbox image -->
+        <img id="lightbox-img" src="" alt="lightbox image">
+
+        <!-- Thumbnails container -->
+        <div id="thumbnail-container">
+            <!-- Thumbnails will be added dynamically using JavaScript -->
+        </div>
+
+        <!-- Previous and Next buttons -->
+        <button id="prev-btn" onclick="changeImage(-1)">&lt; Prev</button>
+        <button id="next-btn" onclick="changeImage(1)">Next &gt;</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

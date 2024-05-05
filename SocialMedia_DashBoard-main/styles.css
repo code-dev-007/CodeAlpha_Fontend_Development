@@ -1,0 +1,260 @@
+@font-face {
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --primary-bg-color: white;
+  --card-bg-color: hsl(227, 47%, 96%);
+  --text-number-color: black;
+  --on-hover: hsl(230, 9%, 13%);
+  --info-title: rgb(104, 97, 97);
+  --on-hover-number: white;
+}
+
+.dark {
+  --primary-bg-color: hsl(230, 17%, 14%);
+  --card-bg-color: hsl(228, 28%, 20%);
+  --text-number-color: hsl(0, 0%, 100%);
+  --dark-heading: rgb(199, 186, 186);
+  --on-hover: hsl(233, 9%, 80%);
+  --info-title: rgb(104, 97, 97);
+  --on-hover-number: hsl(0, 0%, 100%);
+}
+
+* {
+  font-family: Inter;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  transition: background-color 1s;
+
+  background-color: var(--primary-bg-color);
+}
+
+p.heading {
+  color: var(--text-number-color);
+  font-family: Inter;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+p.info {
+  color: var(--info-title);
+  font-weight: 900;
+  margin-bottom: 0.5em;
+}
+
+.infoP {
+  font-family: Inter;
+  font-size: 2rem;
+  color: var(--info-title);
+}
+
+.fa-solid {
+  font-size: 2rem;
+  align-self: center;
+}
+
+
+
+.oneBigColumn {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  justify-content: center;
+}
+
+
+.downFlex {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 0.9fr));
+  padding-bottom: 3rem;
+  justify-content: center;
+}
+
+.mode {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  margin: 10px;
+  border-radius: 0.5em;
+}
+
+.cardF {
+  border-top: 0.2em solid hsl(208, 92%, 53%);
+}
+
+.cardI {
+  border-top: 0.2em solid;
+  border-image-slice: 1;
+}
+
+.borderGrad {
+  border-image-source: linear-gradient(to right,
+      hsl(37, 97%, 70%),
+      hsl(329, 70%, 58%));
+}
+
+.cardT {
+  border-top: 0.2em solid hsl(203, 89%, 53%);
+}
+
+.cardY {
+  border-top: 0.2em solid hsl(348, 97%, 39%);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: center;
+}
+
+img.icon {
+  margin-right: 10px;
+  height: 1.3em;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p.number {
+  color: var(--text-number-color);
+  font-size: 2em;
+  font-weight: 700;
+  font: bold;
+}
+
+p.smallNumber {
+  color: var(--text-number-color);
+  font-size: 1.4em;
+  font-weight: 700;
+  font: bold;
+}
+
+p.followers {
+  margin-bottom: 1rem;
+  font-family: Inter;
+  letter-spacing: 0.2em;
+  color: hsl(228, 7%, 55%);
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dirIcon {
+  margin-right: 0.4em;
+}
+
+.secHeader {
+  text-align: center;
+  font-weight: 800;
+  color: hsl(228, 12%, 44%);
+  font-size: 2rem;
+}
+
+.infoSmall {
+  font-size: 1em;
+  color: hsl(135, 67%, 54%);
+}
+
+.down {
+  color: hsl(348, 97%, 39%);
+}
+
+.cardX {
+  background-color: var(--card-bg-color);
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 10px;
+
+  border-radius: 0.5em;
+}
+
+.oneBigColumn>*:hover {
+  background-color: var(--on-hover);
+
+}
+
+.oneBigColumn>*:hover p.number {
+  color: var(--on-hover-number);
+}
+
+.downFlex>*:hover p.smallNumber {
+  color: var(--on-hover-number);
+
+}
+
+.cardX:hover {
+  background-color: var(--on-hover);
+}
+.bigBar {
+  width: 80%;
+  margin: 0 auto;
+  border-bottom: 2px solid green;
+}
+.container {
+  padding: 1rem 1rem;
+}
+
+@media (min-width: 500px) {
+
+
+  .container {
+    padding: 1rem 3rem;
+  }
+
+  .nav {
+    background-color: var(--card-bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+       display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mode {
+    display: flex;
+    gap: 30px;
+  }
+
+}
+.attribution {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-number-color);
+}
+
+
+@media (max-width: 690px) {
+  .nav {
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+
